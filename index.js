@@ -47,7 +47,7 @@ async function postData(url) {
     }
 }
 
-app.get("/download", async (req, res) => {
+app.get("/ehsan", async (req, res) => {
     const { url } = req.query;
 
     if (!url) {
@@ -60,7 +60,11 @@ app.get("/download", async (req, res) => {
     }
 
     const result = await fetchDownloadLinks(postResponse);
-    res.json(result);
+    res.json({
+        dev: "ehsan fazli",
+        id: "@abj0o",
+        data: result
+    });
 });
 
 app.listen(PORT, () => {
